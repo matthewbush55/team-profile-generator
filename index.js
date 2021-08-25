@@ -1,18 +1,18 @@
 // pull in required libraries
 const inquirer = require("inquirer");
-const fs = require("fs");
-const path = require("path");
 // pull in class constructors
-const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 // pull helper functions
-const htmlGenerator = require("./src/generateHTML");
+const generateHTML = require("./src/generateHTML");
 const questions = require("./lib/Questions");
 
 // array to hold constructed employee objects
 let teamMembers = [];
+// array to hold employee IDs
+let idArray = [];
+
 // function to choose an employee type, then call the function for the chosen employee type
 function chooseEmployeeType() {
   inquirer.prompt(questions.employeeType).then((response) => {
@@ -23,9 +23,10 @@ function chooseEmployeeType() {
       case "Intern":
         getIntern();
         break;
-      case "I'm finished creating employees":
+      case "I'm finished creating new employees":
         console.log("Team creation complete. Generating HTML page...");
         console.log(teamMembers);
+        // generateHTML(data);
         break;
     }
   });
@@ -56,8 +57,6 @@ async function init() {
     chooseEmployeeType();
   });
 }
-
-// build team and write to HTML file
 
 // initialize app
 init();

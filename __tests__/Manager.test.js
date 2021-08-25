@@ -56,4 +56,44 @@ describe("Manager creation", () => {
     //assert
     expect(mgr1.getRole()).toBe(role);
   });
+  it("Can return the Manager name value when the getName function is invoked", () => {
+    //arrange
+    const name = "Matt";
+    //act
+    const mgr1 = new Manager("Matt");
+    //assert
+    expect(mgr1.getName()).toBe(name);
+  });
+  it("Can return the Manager id value when the getId function is invoked", () => {
+    //arrange
+    const id = 1;
+    //act
+    const mgr1 = new Manager("Matt", id);
+    //assert
+    expect(mgr1.getId()).toBe(id);
+  });
+  it("Can return the Manager email value when the getEmail function is invoked", () => {
+    //arrange
+    const email = "test@test.com";
+    //act
+    const mgr1 = new Manager("Matt", 1, email);
+    //assert
+    expect(mgr1.getEmail()).toBe(email);
+  });
+  it("Can return the Manager role value when the getRole function is invoked", () => {
+    //arrange
+    const role = "Manager";
+    //act
+    const mgr1 = new Manager("Matt", 1, "test@test.com", role);
+    //assert
+    expect(mgr1.getRole()).toBe(role);
+  });
+  it("Can return the Manager office number value when the getOfficeNumber function is invoked", () => {
+    //arrange
+    const officeNumber = "555";
+    //act
+    const mgr1 = new Manager("Matt", 1, "test@test.com", officeNumber);
+    //assert
+    expect(mgr1.getOfficeNumber()).toBe(officeNumber);
+  });
 });
