@@ -51,7 +51,9 @@ function generateHTML(teamMembers) {
           <ul class="list-group">
             <li class="list-group-item">ID: </li>
             <li class="list-group-item">Email: <a href="mailto:${item.email}">${item.email}</a></li>
-            <li class="list-group-item">Github: <a>https://github.com/${item.github}</a>${item.github}</li>
+            <li class="list-group-item">Github: <a href="https://github.com/${item.github}" target="_blank"</a>${
+      item.github
+    }</li>
           </ul>
         </div>
       </div>
@@ -75,7 +77,7 @@ function generateHTML(teamMembers) {
           <ul class="list-group">
             <li class="list-group-item">ID: </li>
             <li class="list-group-item">Email: <a href="mailto:${item.email}">${item.email}</a></li>
-            <li class="list-group-item">School: </li>
+            <li class="list-group-item">School: ${item.school}</li>
           </ul>
         </div>
       </div>
