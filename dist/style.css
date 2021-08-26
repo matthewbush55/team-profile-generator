@@ -1,0 +1,22 @@
+.jumbotron {
+  background-color: rgb(246, 93, 93);
+  color: #fff;
+  border-radius: 0;
+}
+
+.employee-card {
+  min-width: 325px;
+}
+
+.card {
+  box-shadow: 10px 10px 10px #888888;
+}
+
+.card-header {
+  background-color: rgb(47, 137, 240);
+  color: #fff;
+}
+
+.card-body {
+  background-color: rgb(243, 243, 243);
+}

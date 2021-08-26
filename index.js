@@ -10,8 +10,6 @@ const questions = require("./lib/Questions");
 
 // array to hold constructed employee objects
 let teamMembers = [];
-// array to hold employee IDs
-let idArray = [];
 
 // function to choose an employee type, then call the function for the chosen employee type
 function chooseEmployeeType() {
@@ -25,8 +23,7 @@ function chooseEmployeeType() {
         break;
       case "I'm finished creating new employees":
         console.log("Team creation complete. Generating HTML page...");
-        console.log(teamMembers);
-        // generateHTML(data);
+        generateHTML(teamMembers);
         break;
     }
   });
