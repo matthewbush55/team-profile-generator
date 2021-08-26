@@ -26,7 +26,7 @@ function generateHTML(teamMembers) {
         <div class="card-body">
           <ul class="list-group">
             <li class="list-group-item">ID: ${item.id}</li>
-            <li class="list-group-item">Email: ${item.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${item.email}">${item.email}</a></li>
             <li class="list-group-item">Office: ${item.officeNumber}</li>
           </ul>
         </div>
@@ -41,16 +41,17 @@ function generateHTML(teamMembers) {
     <div class="col-4 employee-card mb-4">
       <div class="card">
         <div class="card-header">
-          <h2 class="card-title"></h2>
+          <h2 class="card-title">${item.name}</h2>
           <h3 class="card-title">
             <i class="fas fa-glasses mr-2"></i>
+            ${item.getRole()}
           </h3>
         </div>
         <div class="card-body">
           <ul class="list-group">
             <li class="list-group-item">ID: </li>
-            <li class="list-group-item">Email: </li>
-            <li class="list-group-item">Github: </li>
+            <li class="list-group-item">Email: <a href="mailto:${item.email}">${item.email}</a></li>
+            <li class="list-group-item">Github: <a>https://github.com/${item.github}</a>${item.github}</li>
           </ul>
         </div>
       </div>
@@ -64,15 +65,16 @@ function generateHTML(teamMembers) {
     <div class="col-4 employee-card mb-4">
       <div class="card">
         <div class="card-header">
-          <h2 class="card-title"></h2>
+          <h2 class="card-title">${item.name}</h2>
           <h3 class="card-title">
              <i class="fas fa-user-graduate mr-2"></i>
+             ${item.getRole()}
           </h3>
         </div>
         <div class="card-body">
           <ul class="list-group">
             <li class="list-group-item">ID: </li>
-            <li class="list-group-item">Email: </li>
+            <li class="list-group-item">Email: <a href="mailto:${item.email}">${item.email}</a></li>
             <li class="list-group-item">School: </li>
           </ul>
         </div>
