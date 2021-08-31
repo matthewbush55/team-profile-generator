@@ -14,9 +14,9 @@
 
 This command-line application allows users to dynamically create an HTML page containing employee cards with information about their role, id, email, github account, and school. It uses `node.js`, `JavaScript`, and various node modules to prompt the user for answers to questions and create/save the content. It also runs a suite of tests against the functions using `Jest` to ensure that the application will do as it is intended.
 
-![Click here to view walkthrough video](assets/images/walkthrough.gif)
+![Walkthrough](assets/images/walkthrough.gif)
 
-[Walkthrough](https://drive.google.com/file/d/1OCKAFaRqlBljFv3ILkwn5b6qZ1NP6GKC/view)
+[Link to walkthrough video](https://drive.google.com/file/d/1OCKAFaRqlBljFv3ILkwn5b6qZ1NP6GKC/view)
 
 ## Installation
 
